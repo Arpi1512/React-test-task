@@ -14,6 +14,15 @@ function reducer(state = productsState, action) {
          ...state,
          items:[...state.items,action.payload.formData]
        }
+       break;
+       case "updateData":
+         let temp = [...state]  
+          temp.map((editProduct) => {
+            if(editProduct.id === action.payload.id){
+              editProduct = action.payload.item
+            }
+          })
+         return  temp     
   }
   return state;
 }

@@ -11,7 +11,7 @@ export default {
     {
       id: 2,
       description: "Perfumes are important detergent components ",
-      name: "CH Good Girl",
+      name: "Good Girl",
       price: 120,
       count: 70,
       photo: "https://i.ebayimg.com/images/g/cEUAAOSwmTdbdrqv/s-l640.jpg",
@@ -19,10 +19,10 @@ export default {
     {
       id: 3,
       description: "Perfumes are important detergent components ",
-      name: "Trussardi",
+      name: "Jimmy Choo",
       price: 150,
       count: 100,
-      photo: "https://img.perfume.com/images/products/parent/medium/74416w.jpg",
+      photo: "https://lifestyleperfume.am/images/product/852/1646378079-7085662.webp",
     },
     {
       id: 4,

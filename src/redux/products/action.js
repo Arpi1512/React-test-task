@@ -19,3 +19,13 @@ export function addFormData(formData) {
     },
   };
 }
+
+export function updateData({id,item}) {
+  return {
+    type: "updateData",
+    payload: {
+      id,
+      item,
+    },
+  };
+}
