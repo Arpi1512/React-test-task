@@ -14,7 +14,6 @@ function ProductList() {
   const dispatch = useDispatch();
 
 
-
   const handelClick = useCallback((e) => {
     SetIsActive(!isActive);
   }, [SetIsActive]);
