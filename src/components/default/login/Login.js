@@ -13,7 +13,7 @@ function Form() {
   const dispatch = useDispatch()
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (login.length == 0 || pasword.length == 0) {
+    if (login.length === 0 || pasword.length === 0) {
       setError(true);
     }else{window.location.reload()
       dispatch(changeUser({login:login,password:pasword}))

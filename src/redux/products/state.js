@@ -1,4 +1,4 @@
-export default {
+const state = {
   items: [
     {
       id: 1,
@@ -77,3 +77,4 @@ export default {
   ],
 
 };
+export default  state

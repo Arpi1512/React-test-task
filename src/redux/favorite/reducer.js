@@ -14,7 +14,7 @@ function Reducer(state = favoriteState, action) {
           (product) => action.payload.id !== product.id
         ),
       };
-      break;
+      default:
   }
   return state;
 }

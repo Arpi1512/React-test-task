@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { removeProduct, updateData } from "../../../redux/products/action";
+import { removeProduct} from "../../../redux/products/action";
 import { addFavorite } from "../../../redux/products/action";
 import NewProduct from "../newproduct/NewProduct";
 import style from "../product/product.module.scss";
@@ -17,7 +17,7 @@ function ProductList() {
     (e) => {
       SetIsActive(!isActive);
     },
-    [SetIsActive]
+    [SetIsActive,isActive]
   );
 
   const onSave = useCallback(() => {
@@ -25,7 +25,7 @@ function ProductList() {
   }, [SetIsActive]);
 
   const updatevalue = (key, value) => {
-    let temp = [...products];
+    let temp = [...product];
     temp[curentIndex][key] = value;
     setProduct(temp);
   };

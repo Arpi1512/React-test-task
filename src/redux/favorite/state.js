@@ -1,4 +1,5 @@
-export default {
+const state = {
     items: [],
     
 }
+export default state

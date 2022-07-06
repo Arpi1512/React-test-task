@@ -6,8 +6,6 @@ function reducer(state = userState, action) {
      if(state.items.login === action.payload.login && state.items.password === action.payload.password){
        state.isLogin = true
         window.localStorage.setItem("isLogin",state.isLogin)
-        
-       
      }else{
          state.error = "Incorrect Email or Password"
      }
@@ -15,6 +13,8 @@ function reducer(state = userState, action) {
       case "logout":
           window.localStorage.removeItem("isLogin");
           state.isLogin = false
+          break;
+          default:
   }
   return state;
 }

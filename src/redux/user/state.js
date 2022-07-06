@@ -1,4 +1,4 @@
-export default {
+const state = {
   items:{
       name: "John",
       login: "john@mail.ru",
@@ -6,3 +6,5 @@ export default {
     },
   isLogin: false,
 };
+
+export default state
