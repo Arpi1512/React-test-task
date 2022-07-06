@@ -1,0 +1,38 @@
+.navContent {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(15, 32, 24);
+  ul {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 13px;
+    li {
+      display: contents;
+      color: #ffffff;
+      &:last-child{
+        button{
+        background-color: transparent;
+        border: none;
+        color: #ffffff;
+        outline: none;
+        }
+      }
+     
+    }
+  }
+}
+.header_Content {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(15, 32, 24);
+    padding: 0 25px;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 13px;
+      li {
+        color: #ffffff;
+       
+      }
+    }
+  }

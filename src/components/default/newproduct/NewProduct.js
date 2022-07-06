@@ -1,8 +1,8 @@
 import { memo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addFormData } from "../../redux/products/action";
+import { addFormData } from "../../../redux/products/action";
 import style from "../newproduct/newProduct.module.scss";
-import parfum from "../../Images/photo.jpeg"
+import parfum from "../../../Images/photo.jpeg"
 
 export default memo(function NewProduct({onSave}) {
   const product = useSelector(s => s.products.items)
