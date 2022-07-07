@@ -1,29 +1,31 @@
 import React, { useState } from "react";
-import style from "../login/login.module.scss"
+import style from "../login/login.module.scss";
 import { changeUser } from "../../../redux/user/action";
-import { useDispatch } from "react-redux";
-
-
+import { useDispatch, useSelector } from "react-redux";
 
 function Form() {
   const [login, setLogin] = useState("");
   const [pasword, setPassword] = useState("");
   const [error, setError] = useState(false);
+  const dispatch = useDispatch();
   const [reqError, setReqError] = useState("");
-  const dispatch = useDispatch()
+  const info = useSelector((s) => s.users.items);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (login.length === 0 || pasword.length === 0) {
       setError(true);
-    }else{window.location.reload()
-      dispatch(changeUser({login:login,password:pasword}))
+    } else if (login !== info.login && pasword !== info.password) {
+      setReqError("invalid password or email");
+    } else {
+      window.location.reload();
+      dispatch(changeUser({ login: login, password: pasword }));
     }
-    
   };
   return (
     <div className={style.login}>
       <form onSubmit={handleSubmit}>
-        <label>{reqError && reqError}</label>
+        <label>{reqError}</label>
         <div>
           <input
             placeholder="Login"

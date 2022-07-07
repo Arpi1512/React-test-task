@@ -10,7 +10,6 @@ export function removeProduct(id) {
     payload: id,
   };
 }
-
 export function addFormData(formData) {
   return {
     type: "ADD_FORM_DATA",
